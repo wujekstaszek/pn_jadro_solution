@@ -1,0 +1,26 @@
+Przykładowy wynik:
+
+./a.out -fork
+PID głównego programu 395
+PID rodzica: 395
+PID kopii:396    
+
+./a.out                           
+PID/NAME/PRI/UID                                                                                                        
+1 (init) 0 0                                                                                                            
+79 (init) 0 1025                                                                                                        
+80 (bash) 0 1025                                                                                                        
+387 (bash) 10 1025                                                                                                      
+397 (a.out) 10 1025 
+                                                                                                    
+./a.out -close 387   
+Killed      
+
+./a.out           
+
+PID/NAME/PRI/UID                                                                                                        
+1 (init) 0 0                                                                                                            
+79 (init) 0 1025                                                                                                        
+80 (bash) 0 1025                                                                                                        
+399 (a.out) 0 1025 
+
