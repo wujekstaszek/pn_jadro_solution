@@ -1,6 +1,6 @@
 #!/bin/bash
 git="https://github.com/wujekstaszek/pn_Jadro.git"
-skrypt=
+skrypt="https://raw.githubusercontent.com/wujekstaszek/pn_jadro_solution/master/run_morgala_aleksander.sh?token=AETFNZKSV3YOPGTU6EJUM2S6WPS7C"
 
 if [ $1 == "clone" ];
 then
