@@ -1,6 +1,6 @@
 #!/bin/bash
 git="https://github.com/wujekstaszek/pn_Jadro.git"
-skrypt=
+
 
 if [ $1 == "clone" ];
 then
@@ -32,9 +32,9 @@ then
 	./pn_jadro_solution/projekt.exe -fork
 }
 fi
-if [ $1 == "update"]; then
+if [ $1 == "update" ]; then
 	echo "Aktualizacja skryptu"
 	git clone $solution temporary_directory
 	mv temporary_directory/run_morgala_aleksander.sh .
 	rm -fr temporary_directory
-
+fi
