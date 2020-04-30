@@ -1,6 +1,6 @@
 #!/bin/bash
 git="https://github.com/wujekstaszek/pn_Jadro.git"
-skrypt="https://raw.githubusercontent.com/wujekstaszek/pn_jadro_solution/master/run_morgala_aleksander.sh?token=AETFNZKSV3YOPGTU6EJUM2S6WPS7C"
+skrypt=
 
 if [ $1 == "clone" ];
 then
@@ -34,5 +34,7 @@ then
 fi
 if [ $1 == "update"]; then
 	echo "Aktualizacja skryptu"
-	curl -s $skrypt > run_morgala_aleksander.sh
+	git clone $solution temporary_directory
+	mv temporary_directory/run_morgala_aleksander.sh .
+	rm -fr temporary_directory
 
