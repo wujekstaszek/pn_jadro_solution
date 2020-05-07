@@ -24,5 +24,6 @@ if [ $1 == "update" ]; then
 	git clone -q $git temporary_directory
 	mv temporary_directory/run_morgala_aleksander.sh .
 	rm -fr temporary_directory
+	chmod 555 run_morgala_aleksander.sh
 	echo "Skrypt zaktualizowany"
 fi
