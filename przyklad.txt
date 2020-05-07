@@ -15,12 +15,3 @@ PID/NAME/PRI/UID
                                                                                                     
 ./a.out -close 387   
 Killed      
-
-./a.out           
-
-PID/NAME/PRI/UID                                                                                                        
-1 (init) 0 0                                                                                                            
-79 (init) 0 1025                                                                                                        
-80 (bash) 0 1025                                                                                                        
-399 (a.out) 0 1025 
-

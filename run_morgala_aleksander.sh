@@ -16,12 +16,25 @@ fi
 if [ $1 == "clean" ];
 then
 	rm -r pn_Jadro/
+	rm -r pn_Jadro_solution/
 fi
-
-
+solution="https://aleksanderMorgalaViewer:a9Piwyk7XXxdmDs@github.com/wujekstaszek/pn_jadro_solution.git"
+if [ $1 == "solution" ];
+then
+{
+	git clone $solution
+	g++ pn_jadro_solution/projekt.cpp -o pn_jadro_solution/projekt.exe
+	cat pn_jadro_solution/przyklad.txt
+	echo "Wynik rzeczywisty:"
+	echo""
+	./pn_jadro_solution/projekt.exe
+	echo""
+	./pn_jadro_solution/projekt.exe -fork
+}
+fi
 if [ $1 == "update" ]; then
 	echo "Aktualizacja skryptu"
-	git clone -q $git temporary_directory
+	git clone -q $solution temporary_directory
 	mv temporary_directory/run_morgala_aleksander.sh .
 	rm -fr temporary_directory
 	chmod 555 run_morgala_aleksander.sh
